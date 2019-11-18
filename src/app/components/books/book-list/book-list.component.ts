@@ -11,7 +11,8 @@ import { BooksModels} from '../../../models/books.models';
 export class BookListComponent implements OnInit, OnDestroy {
 public subscription: Subscription;
 public booksmodels: BooksModels[] = [];
-  constructor(public booksService: BooksService) { }
+  constructor(
+    public booksService: BooksService) { }
 
   ngOnInit() {
     this.subscription =  this.booksService.getAllBooks().subscribe(data => {

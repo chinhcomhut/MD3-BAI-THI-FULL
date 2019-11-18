@@ -1,3 +1,7 @@
+
+<div *ngIf="isSuccess" class="alert alert-success" role="alert">
+  Đã sửa sách thành công!
+</div>
 <form action="" method="POST" role="form">
   <legend>Cập nhật sách</legend>
   <div class="form-group">
@@ -12,5 +16,9 @@
     <label for="">Mô tả</label>
     <textarea class="form-control"[(ngModel)]="booksmodels.description"[ngModelOptions]="{standalone: true}" row="6"></textarea>
   </div>
-  <button type="submit" class="btn btn-primary"[style.margin-top.px]="30"(click)="onEditBooks()">Cập Nhật</button>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary"[style.margin-top.px]="30"(click)="onEditBooks()">Thêm Sách</button>
+    <button type="submit" class="btn btn-primary"[style.margin-top.px]="30"[style.margin-left.px]="200" [routerLink]="['/books']">Thoát</button>
+  </div>
+
 </form>
